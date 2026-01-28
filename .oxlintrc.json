@@ -1,0 +1,12 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "rules": {
+    "no-alert": "error",
+    "no-unused-vars": "error",
+    "oxc/approx-constant": "warn",
+    "no-plusplus": "off"
+  },
+  "env": {
+    "builtin": true
+  }
+}
