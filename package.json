@@ -1,0 +1,16 @@
+{
+  "name": "todli",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "oxlint": "^1.42.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "compilerOptions": {
+    // 環境設定と最新機能
+    // "lib": コンパイル時に含めるライブラリ定義ファイルを指定
+    // ESNextは最新のECMAScript機能を全て含む
+    "lib": ["ESNext"],
+
+    // "target": 出力されるJavaScriptのバージョンを指定
+    // ESNextは最新のECMAScript標準に準拠したコードを出力
+    "target": "ESNext",
+
+    // "module": 生成されるモジュールコードの形式を指定
+    // Preserveは元のimport/export構文をそのまま保持（bundler向け）
+    "module": "Preserve",
+
+    // "moduleDetection": どのファイルをモジュールとして扱うかを制御
+    // forceは全てのファイルを強制的にモジュールとして扱う
+    "moduleDetection": "force",
+
+    // "jsx": JSX構文の処理方法を指定
+    // react-jsxはReact 17以降の新しいJSX変換を使用（importなしでJSXが使える）
+    "jsx": "react-jsx",
+
+    // "allowJs": JavaScriptファイルのコンパイルを許可
+    // TypeScriptとJavaScriptを混在させることができる
+    "allowJs": true,
+
+    // バンドラーモード
+    // "moduleResolution": モジュール解決戦略を指定
+    // bundlerはViteやBunなどの最新バンドラー向けの解決戦略を使用
+    "moduleResolution": "bundler",
+
+    // "allowImportingTsExtensions": .ts/.tsx拡張子を含むimportを許可
+    // bundlerモードでランタイム前にトランスパイルされる前提で使用
+    "allowImportingTsExtensions": true,
+
+    // "verbatimModuleSyntax": import/export構文をより厳密に扱う
+    // 型のみのimportには明示的に`import type`が必要になる
+    "verbatimModuleSyntax": true,
+
+    // "noEmit": コンパイル結果のファイルを出力しない
+    // bundlerが別途トランスパイルを行う場合に使用（型チェックのみ実行）
+    "noEmit": true,
+
+    // ベストプラクティス
+    // "strict": 全ての厳格な型チェックオプションを有効化
+    // strictNullChecks, strictFunctionTypes, noImplicitAnyなどが含まれる
+    "strict": true,
+
+    // "skipLibCheck": ライブラリの型定義ファイル(.d.ts)の型チェックをスキップ
+    // コンパイル速度向上のため、node_modules内の型定義はチェックしない
+    "skipLibCheck": true,
+
+    // "noFallthroughCasesInSwitch": switch文でbreak/returnなしのfall-throughを禁止
+    // バグの原因となりやすいfall-throughを防ぐ
+    "noFallthroughCasesInSwitch": true,
+
+    // "noUncheckedIndexedAccess": 配列やオブジェクトの添字アクセスの結果にundefinedを含める
+    // arr[0]の型がT | undefinedとなり、より安全なコードを促進
+    "noUncheckedIndexedAccess": true,
+
+    // "noImplicitOverride": 親クラスのメソッドをオーバーライドする際にoverride修飾子を必須にする
+    // オーバーライドの意図を明確にし、リファクタリング時の安全性を向上
+    "noImplicitOverride": true,
+
+    // より厳格なフラグ（デフォルトでは無効）
+    // "noUnusedLocals": 使用されていないローカル変数があるとエラーにする
+    // 開発中の柔軟性のため現在は無効
+    "noUnusedLocals": false,
+
+    // "noUnusedParameters": 使用されていない関数パラメータがあるとエラーにする
+    // 開発中の柔軟性のため現在は無効
+    "noUnusedParameters": false,
+
+    // "noPropertyAccessFromIndexSignature": インデックスシグネチャで定義されたプロパティへのドット記法アクセスを禁止
+    // obj.propではなくobj["prop"]を強制（現在は無効）
+    "noPropertyAccessFromIndexSignature": false
+  }
+}
