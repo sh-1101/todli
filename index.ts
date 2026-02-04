@@ -1,7 +1,7 @@
 #!/usr/bin/env bun
 
 import { TODO_FILE } from "./src/config.ts";
-import { readTodoFile, writeTodoFile } from "./src/fs.ts";
+import { readTodoFile, writeTodoFile } from "./src/utils/file.ts";
 
 const args = process.argv.slice(2);
 const command = args[0];
