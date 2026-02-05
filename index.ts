@@ -1,6 +1,7 @@
 #!/usr/bin/env bun
 
 import { add } from "./src/commands/add.ts";
+import { clear } from "./src/commands/clear.ts";
 import { done } from "./src/commands/done.ts";
 import { list } from "./src/commands/list.ts";
 import { remove } from "./src/commands/remove.ts";
@@ -20,6 +21,7 @@ Commands:
   list          Show all TODOs
   done <index>  Mark a TODO as completed
   remove <index>  Remove a TODO 
+  clear        Clear all completed TODOs
   help          Show this help
 `);
 }
@@ -36,6 +38,8 @@ async function main(): Promise<void> {
     await done(commandArgs[0]);
   } else if (command === "remove") {
     await remove(commandArgs[0]);
+  } else if (command === "clear") {
+    await clear();
   } else {
     console.error(`Unknown command: ${command}`);
     process.exit(1);
