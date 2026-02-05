@@ -1,6 +1,9 @@
 {
   "name": "todli",
   "version": "0.1.0",
+  "bin": {
+    "todli": "./index.ts"
+  },
   "type": "module",
   "module": "index.ts",
   "scripts": {
