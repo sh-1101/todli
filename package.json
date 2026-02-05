@@ -8,7 +8,7 @@
     "url": "git+https://github.com/sh-1101/todli.git"
   },
   "bin": {
-    "todli": "./index.ts"
+    "todli": "./bin/todli"
   },
   "type": "module",
   "module": "index.ts",
