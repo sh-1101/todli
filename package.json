@@ -1,6 +1,12 @@
 {
   "name": "todli",
   "version": "0.1.0",
+  "description": "Simple CLI TODO list manager",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sh-1101/todli.git"
+  },
   "bin": {
     "todli": "./index.ts"
   },
